@@ -1,0 +1,130 @@
+
+
+
+<div class="main-nav">
+<!--   <nav class="book-desktop-menu">
+    <ul>
+      <li class="nav-item">
+        <a href="#header-preorder-container">Order</a>
+      </li>
+      <li class="nav-item">
+        <a href="#reader-section">read sample</a>
+      </li>
+      <li class="nav-item">
+        <a href="#book-review-section">reviews</a>
+      </li>
+      <li class="nav-item">
+        <a href="#press-container">press</a>
+      </li>
+      <li class="nav-item">
+        <a href="#diy-container">diy recipes</a>
+      </li>
+      <li class="nav-item">
+        <a href="#about-author-section">About Mathilde</a>
+      </li>
+      <li class="nav-item">
+        <a href="#beautygrows-gallery">gallery</a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="book-mobile-menu">
+  <button class="mobile-nav-button"><i class="fa fa-bars fa-2x"></i></button>
+    <ul>
+      <li class="nav-item">
+        <a href="#header-preorder-container">Order</a>
+      </li>
+      <li class="nav-item">
+        <a href="#reader-section">read sample</a>
+      </li>
+      <li class="nav-item">
+        <a href="#book-review-section">reviews</a>
+      </li>
+      <li class="nav-item">
+        <a href="#press-container">press</a>
+      </li>
+      <li class="nav-item">
+        <a href="#diy-container">diy recipes</a>
+      </li>
+      <li class="nav-item">
+        <a href="#about-author-section">About Mathilde</a>
+      </li>
+      <li class="nav-item">
+        <a href="#beautygrows-gallery">gallery</a>
+      </li>
+    </ul>
+  </nav> -->
+</div>
+
+<%#= render "first-container" %>
+
+<%#= render "reader-container" %>
+
+<%#= render "quote-container" %>
+
+<%#= render "press-container" %>
+
+<%#= render "diy-container" %>
+
+<%#= render "tour-container" %>
+
+<%#= render "about-container" %>
+
+<h3>Add a New Member</h3>
+<p>Please enter your email address to subscribe to our newsletter.</p>
+<%= form_tag('/mcsubscribe/subscribe', method: "post", id: "mcsubscribe", remote: "true") do -%>
+   <%= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
+   <%= submit_tag("Subscribe") %>
+<% end %>
+<div id="response">Response Will be displayed here</div>
+
+
+<div class="fb-tab-content">
+  <div class="beautygrows-gallery cd-section" id="beautygrows-gallery">
+    <!-- <h3>#thefrenchbeautysolution</h3> -->
+    <div id="photo-detail"></div>
+    <div class="table-width">
+    <% animations = ["fadeInUp", "fadeInLeft", "fadeInRight"] %>
+    <% @photos.each_with_index do |photo, i| %>
+      <%= link_to image_tag(photo.standard_url, 
+        class: "instaphoto animated #{animations[i % 3]} size#{i % 3} p#{i+1}",
+        "data-content" => "<div class='close'>x</div><div class='instaphoto-zoom'>#{image_tag photo.standard_url}</div><div class='user-profile-pic'>#{image_tag(photo.user_profile_picture) if photo.user_profile_picture}</div><div class='photo-info'><div class='photo-user-full-name'>#{photo.user_full_name}</div><div class='photo-user-username'>#{photo.user_username}</div><div class='photo-caption'>#{photo.caption_text}</div></div>"),
+        photo.standard_url, class: "fancybox", rel: "instagallery", title: "@#{photo.user_username}"
+      %>
+    <% end %>
+  </div>
+  </div>
+  <div class="social-links-container">
+  </div>
+</div>
+
+<div id="fb-root"></div>
+<script src="https://connect.facebook.net/en_US/all.js"></script>
+<script>
+FB.init({
+  appId : '536778663069268',
+  status : true, // check login status
+  cookie : true, // enable cookies to allow the server to access the session
+  xfbml : true // parse XFBML
+});
+</script>
+<script type="text/javascript">
+window.fbAsyncInit = function() {
+  FB.Canvas.setAutoGrow();
+}
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
+</script>
+<!--script type="text/javascript">
+$( document ).ready(function() {
+  $(".instaphoto").popover({
+    html: true,
+    placement: "top",
+    trigger: "hover"
+  });
+});
+</script-->
+
