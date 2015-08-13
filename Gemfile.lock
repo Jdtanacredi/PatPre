@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/stripe/stripe-ruby
+  revision: ea3a79066965e1d94a6f5821f9acc8b792b13fd9
+  specs:
+    stripe (1.24.0)
+      json (~> 1.8.1)
+      rest-client (~> 1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,6 +56,8 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    domain_name (0.5.24)
+      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     eventmachine (1.0.8)
     excon (0.45.4)
@@ -60,6 +70,8 @@ GEM
       railties (>= 3.2, < 5.0)
     hashie (3.4.2)
     hike (1.2.3)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     i18n (0.6.1)
     instagram (1.1.5)
       faraday (>= 0.7, < 0.10)
@@ -80,6 +92,7 @@ GEM
     mime-types (1.25.1)
     multi_json (1.11.2)
     multipart-post (2.0.0)
+    netrc (0.10.3)
     orm_adapter (0.5.0)
     pg (0.18.2)
     polyglot (0.3.5)
@@ -115,6 +128,10 @@ GEM
       json (~> 1.4)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rolify (4.1.1)
     rspec-collection_matchers (1.1.2)
       rspec-expectations (>= 2.99.0.beta1)
@@ -155,6 +172,9 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.1)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -176,5 +196,6 @@ DEPENDENCIES
   rolify
   rspec-rails (~> 2.0)
   sass-rails (~> 3.2.3)
+  stripe!
   thin
   uglifier (>= 1.0.3)
