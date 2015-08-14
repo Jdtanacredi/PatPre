@@ -36,7 +36,9 @@ group :assets do
 end
 
 group :development, :test do
+	gem 'pry'
   gem 'rspec-rails', '~> 2.0'
+  gem "figaro", "~> 0.7.0"
 end
 
 # To use ActiveModel has_secure_password

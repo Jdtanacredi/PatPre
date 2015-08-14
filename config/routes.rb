@@ -6,6 +6,9 @@ CaudalieBeautygrows::Application.routes.draw do
   end
 
   root :to => "home#index"
+  get 'charges/create'
+  resources :charges, only: [:create]
+
 
   # root :to => 'mcsubscribe#index'
   post 'mcsubscribe/subscribe', to: 'mcsubscribe#subscribe'
