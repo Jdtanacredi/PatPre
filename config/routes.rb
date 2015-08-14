@@ -6,7 +6,6 @@ CaudalieBeautygrows::Application.routes.draw do
   end
 
   root :to => "home#index"
-  # post 'mcsubscribe/subscribe' => 'mcsubscribe#subscribe'
 
   # root :to => 'mcsubscribe#index'
   post 'mcsubscribe/subscribe', to: 'mcsubscribe#subscribe'
