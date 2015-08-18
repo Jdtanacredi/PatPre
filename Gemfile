@@ -18,7 +18,7 @@ gem 'mailchimp-api'
 gem "font-awesome-rails"
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 # gem 'stripe_tax', :git => 'git://github.com/dnprock/stripe_tax.git'
-
+gem "figaro", "~> 0.7.0"
 group :production do
   gem 'thin'
   gem 'rails_12factor'
@@ -39,7 +39,6 @@ end
 group :development, :test do
 	gem 'pry'
   gem 'rspec-rails', '~> 2.0'
-  gem "figaro", "~> 0.7.0"
 end
 
 # To use ActiveModel has_secure_password
