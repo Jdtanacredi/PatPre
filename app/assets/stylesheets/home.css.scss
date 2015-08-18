@@ -1,29 +1,62 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.image-grid {height: 100vh;}
-.grid-sizer, .item {
-  // width: 25%;
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
-.item img {
+
+/* force scrollbar, prevents initial gap */
+html {
+  overflow-y: scroll; 
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* ---- grid ---- */
+
+.grid {
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
   display: block;
-  width: 100%;
+  clear: both;
 }
 
-.item,
+/* ---- .element-item ---- */
+
+/* 5 columns, percentage width */
+.grid-item,
 .grid-sizer {
-  // width: 20%;
+  width: 20%;
 }
 
-.item {
+.grid-item {
   float: left;
   height: 100px;
   background: #0D8;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.7);
 }
-.image-grid .item-h3, .image-grid .item-w3 { height: 320px; width: 320px;}
-.image-grid .item-h2, .image-grid .item-w2 { height: 320px; width: 640px}
-.image-grid .item-h1, .image-grid .item-w1 {height: 640px; width: 640px;}
 
+.grid-item--width2 { width: 40%; }
+.grid-item--height2 { height: 200px; }
+
+
+@media (max-width:900px) {
+  .grid-item, /* 3 columns */
+  .grid-sizer {
+    width: 33%;
+  }
+  
+  .grid-item--width2 { width: 66%; }
+}
 
 
 
