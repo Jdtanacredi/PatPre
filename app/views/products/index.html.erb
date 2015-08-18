@@ -1,0 +1,30 @@
+<div>left</div>
+<div class="product-fixed-right">
+	<div class="product-info-section">
+		<h4 class="product-info-company">pat mcgrath labs</h4>
+		<h2 class="product-info-name">0018</h2>
+		<h4 class="product-info-price">$30.00</h4>
+	</div>
+
+	<div>Buy Now</div>
+
+	<div class="product-specs">
+		<p class="product-color">color: </p>
+		<p class="product-dimensions">dimensions: </p>
+		<p class="product-materials">materials: </p>
+	</div>
+
+
+</div>
+
+
+
+
+
+<h3>Add a New Member</h3>
+<p>Please enter your email address to subscribe to our newsletter.</p>
+<%= form_tag('/mcsubscribe/subscribe', method: "post", id: "mcsubscribe", remote: "true") do -%>
+   <%= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
+   <%= submit_tag("Subscribe") %>
+<% end %>
+<div id="response">Response Will be displayed here</div>

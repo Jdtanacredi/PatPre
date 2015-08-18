@@ -17,8 +17,8 @@ gem 'mailchimp-api'
 # gem 'jquery-waypoints-rails', '~> 2.0.5'
 gem "font-awesome-rails"
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
-
 gem 'stripe_tax', :git => 'git://github.com/dnprock/stripe_tax.git'
+gem 'masonry-rails'
 
 group :production do
   gem 'thin'

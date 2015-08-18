@@ -1,4 +1,7 @@
 CaudalieBeautygrows::Application.routes.draw do
+
+  get "products/index"
+
   devise_for :users
 
   resources :photos do

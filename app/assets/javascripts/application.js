@@ -17,4 +17,5 @@
 //= require jquery.fancybox-buttons
 //= require jquery.waypoints.min
 //= require jquery.slimscroll
+//= require isotope/jquery.isotope
 //= require_tree .

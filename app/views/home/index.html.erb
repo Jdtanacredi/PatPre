@@ -1,74 +1,17 @@
 
-
-
-<div class="main-nav">
-<!--   <nav class="book-desktop-menu">
-    <ul>
-      <li class="nav-item">
-        <a href="#header-preorder-container">Order</a>
-      </li>
-      <li class="nav-item">
-        <a href="#reader-section">read sample</a>
-      </li>
-      <li class="nav-item">
-        <a href="#book-review-section">reviews</a>
-      </li>
-      <li class="nav-item">
-        <a href="#press-container">press</a>
-      </li>
-      <li class="nav-item">
-        <a href="#diy-container">diy recipes</a>
-      </li>
-      <li class="nav-item">
-        <a href="#about-author-section">About Mathilde</a>
-      </li>
-      <li class="nav-item">
-        <a href="#beautygrows-gallery">gallery</a>
-      </li>
-    </ul>
-  </nav>
-
-  <nav class="book-mobile-menu">
-  <button class="mobile-nav-button"><i class="fa fa-bars fa-2x"></i></button>
-    <ul>
-      <li class="nav-item">
-        <a href="#header-preorder-container">Order</a>
-      </li>
-      <li class="nav-item">
-        <a href="#reader-section">read sample</a>
-      </li>
-      <li class="nav-item">
-        <a href="#book-review-section">reviews</a>
-      </li>
-      <li class="nav-item">
-        <a href="#press-container">press</a>
-      </li>
-      <li class="nav-item">
-        <a href="#diy-container">diy recipes</a>
-      </li>
-      <li class="nav-item">
-        <a href="#about-author-section">About Mathilde</a>
-      </li>
-      <li class="nav-item">
-        <a href="#beautygrows-gallery">gallery</a>
-      </li>
-    </ul>
-  </nav> -->
+<div class="image-grid clearfix">
+  <div class="grid-sizer"></div>
+  <div class="item"><%= image_tag "big640x640.jpg" %></div>
+  <div class="item"><%= image_tag "hoz640x320.jpg" %></div>
+  <div class="item"><%= image_tag "small320x320.jpg" %></div>
+  <div class="item"><%= image_tag "small320x320.jpg" %></div>
+  <div class="item"><%= image_tag "big640x640.jpg" %></div>
+  <div class="item"><%= image_tag "hoz640x320.jpg" %></div>
+  <div class="item"><%= image_tag "hoz640x320.jpg" %></div>
 </div>
 
-<%#= render "first-container" %>
 
-<%#= render "reader-container" %>
-
-<%#= render "quote-container" %>
-
-<%#= render "press-container" %>
-
-<%#= render "diy-container" %>
-
-<%#= render "tour-container" %>
-
-<%#= render "about-container" %>
+<div class="clearfix">
 
 <h3>Add a New Member</h3>
 <p>Please enter your email address to subscribe to our newsletter.</p>
@@ -77,7 +20,7 @@
    <%= submit_tag("Subscribe") %>
 <% end %>
 <div id="response">Response Will be displayed here</div>
-
+</div>
 
 
 <div>
