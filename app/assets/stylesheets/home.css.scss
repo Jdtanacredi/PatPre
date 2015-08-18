@@ -1,31 +1,60 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+.image-grid {height: 100vh;}
 .grid-sizer, .item {
-  width: 25%;
+  // width: 25%;
 }
 .item img {
   display: block;
   width: 100%;
 }
 
-
 .item,
 .grid-sizer {
-  width: 20%;
+  // width: 20%;
 }
 
 .item {
   float: left;
-  height: 100%;
+  height: 100px;
   background: #0D8;
-  border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.7);
+}
+.image-grid .item-h3, .image-grid .item-w3 { height: 320px; width: 320px;}
+.image-grid .item-h2, .image-grid .item-w2 { height: 320px; width: 640px}
+.image-grid .item-h1, .image-grid .item-w1 {height: 640px; width: 640px;}
+
+
+
+
+// .example figure {
+//   float: left;
+//   background: #17A781;
+//   width: 20%;
+//   height: 159px;
+//   margin: 0 2px 4px;
+// }
+// .example .item-w2 {
+//   width: 40%;
+//   background: #ED9393;
+// }
+// .example .item-h2 {
+//   height: 322px;
+//   background: #7CB744;
+// }
+// .example .item-h3 {
+//   height: 485px;
+//   background: #38B5E5;
+// }
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  transition-property: transform, opacity;
 }
 
-.item--width2 { width: 40%; }
-.item--height2 { height: 200px; }
 
 
 @media handheld, screen and (max-width: 500px) {
