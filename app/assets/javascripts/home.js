@@ -1,5 +1,5 @@
 $(window).load(function() {
-	$('.fuzz').fadeOut(3000, function() {
+	$('.fuzz').fadeOut(6000, function() {
 		$(this).css('display','none');
 	});
 	var $container = $('.grid');
