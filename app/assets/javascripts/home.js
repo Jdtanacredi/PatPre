@@ -1,13 +1,17 @@
-$(document).ready( function() {
+$(window).load(function() {
+	$('.fuzz').fadeOut(3000, function() {
+		$(this).css('display','none');
+	});
 	var $container = $('.grid');
 	$container.imagesLoaded( function() {
-  	$container.isotope({
+  	$('.grid').isotope({
     itemSelector: '.grid-item',
     percentPosition: true,
     masonry: {
       columnWidth: '.grid-sizer'
     }
   	});
+  	// $(".grid").isotope( 'reLayout' );
 	});
 });
 
