@@ -1,13 +1,14 @@
 $(document).ready( function() {
-
-  $('.grid').isotope({
+	var $container = $('.grid');
+	$container.imagesLoaded( function() {
+  	$container.isotope({
     itemSelector: '.grid-item',
     percentPosition: true,
     masonry: {
       columnWidth: '.grid-sizer'
     }
-  });
-
+  	});
+	});
 });
 
 // $(document).ready(function() {
