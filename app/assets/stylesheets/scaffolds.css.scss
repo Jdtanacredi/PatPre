@@ -9,12 +9,13 @@
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
-// body {
-//   background-color: #000;
-//   color: #cdcdcd;
-//   // font-size: 13px;
-//   // line-height: 18px;
-// }
+body {
+  background-color: #000;
+  color: #cdcdcd;
+  margin: 0;
+  // font-size: 13px;
+  // line-height: 18px;
+}
 
 // p, ol, ul, td {
 //   font-size: 13px;

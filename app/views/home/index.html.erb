@@ -1,14 +1,40 @@
-
+<!-- 
 <div class="image-grid clearfix">
   <div class="grid-sizer"></div>
-  <div class="item"><%= image_tag "big640x640.jpg" %></div>
-  <div class="item"><%= image_tag "hoz640x320.jpg" %></div>
-  <div class="item"><%= image_tag "small320x320.jpg" %></div>
-  <div class="item"><%= image_tag "small320x320.jpg" %></div>
-  <div class="item"><%= image_tag "big640x640.jpg" %></div>
-  <div class="item"><%= image_tag "hoz640x320.jpg" %></div>
-  <div class="item"><%= image_tag "hoz640x320.jpg" %></div>
+  <div class="item item-h1 item-w1"><%#= image_tag "big640x640.jpg" %></div>
+  <div class="item item-h2 item-w2"><%#= image_tag "hoz640x320.jpg" %></div>
+  <div class="item item-h3 item-w3"><%#= image_tag "small320x320.jpg" %></div>
+  <div class="item item-h3 item-w3"><%#= image_tag "small320x320.jpg" %></div>
+  <div class="item item-h1 item-w1"><%#= image_tag "big640x640.jpg" %></div>
+  <div class="item item-h2 item-w2"><%#= image_tag "hoz640x320.jpg" %></div>
+  <div class="item item-h2 item-w2"><%#= image_tag "hoz640x320.jpg" %></div>
+</div> -->
+
+<div class="fuzz">static</div>
+
+<div class="grid">
+  <div class="grid-sizer"></div>
+  <div class="grid-item grid-item--width2 grid-item--height2"><%= image_tag "big640x640.jpg" %></div>
+  <div class="grid-item grid-item--width2"><%= image_tag "hoz640x320.jpg" %></div>
+  <div class="grid-item"><%= image_tag "small320x320.jpg" %></div>
+  <div class="grid-item"><%= image_tag "small320x320.jpg" %></div>
+  <div class="grid-item grid-item--width2 grid-item--height2"><%= image_tag "big640x640.jpg" %></div>
+  <div class="grid-item"><%= image_tag "small320x320.jpg" %></div>
+  <div class="grid-item"><%= image_tag "small320x320.jpg" %></div>
+  <!-- <div class="grid-item grid-item--width2 grid-item--height2"></div> -->
+  <!-- <div class="grid-item grid-item--width2"></div> -->
+  <!-- <div class="grid-item grid-item--width2"></div> -->
+  <!-- <div class="grid-item grid-item--height2"></div> -->
+  <!-- <div class="grid-item"></div> -->
+  <!-- <div class="grid-item grid-item--width2"></div> -->
+  <!-- <div class="grid-item grid-item--height2"></div> -->
+  <!-- <div class="grid-item"></div> -->
+  <!-- <div class="grid-item"></div> -->
 </div>
+
+
+
+
 
 
 <div class="clearfix">
@@ -118,14 +144,14 @@
     <!-- <h3>#thefrenchbeautysolution</h3> -->
     <div id="photo-detail"></div>
     <div class="table-width">
-    <% animations = ["fadeInUp", "fadeInLeft", "fadeInRight"] %>
-    <% @photos.each_with_index do |photo, i| %>
-      <%= link_to image_tag(photo.standard_url, 
+    <%# animations = ["fadeInUp", "fadeInLeft", "fadeInRight"] %>
+    <%# @photos.each_with_index do |photo, i| %>
+      <%#= link_to image_tag(photo.standard_url, 
         class: "instaphoto animated #{animations[i % 3]} size#{i % 3} p#{i+1}",
         "data-content" => "<div class='close'>x</div><div class='instaphoto-zoom'>#{image_tag photo.standard_url}</div><div class='user-profile-pic'>#{image_tag(photo.user_profile_picture) if photo.user_profile_picture}</div><div class='photo-info'><div class='photo-user-full-name'>#{photo.user_full_name}</div><div class='photo-user-username'>#{photo.user_username}</div><div class='photo-caption'>#{photo.caption_text}</div></div>"),
         photo.standard_url, class: "fancybox", rel: "instagallery", title: "@#{photo.user_username}"
       %>
-    <% end %>
+    <%# end %>
   </div>
   </div>
   <div class="social-links-container">

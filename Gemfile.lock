@@ -99,8 +99,6 @@ GEM
     mailchimp-api (2.0.6)
       excon (>= 0.16.0)
       json (>= 1.7.7)
-    masonry-rails (0.2.4)
-      railties
     method_source (0.8.2)
     mime-types (1.25.1)
     multi_json (1.11.2)
