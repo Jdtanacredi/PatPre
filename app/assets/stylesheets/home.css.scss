@@ -35,6 +35,7 @@ body {
 .grid-item,
 .grid-sizer {
   width: 10%;
+  margin-bottom: 0;
 }
 
 .grid-item {
@@ -48,7 +49,7 @@ body {
 
 .grid-item--width2 { width: 20%; }
 // .grid-item--height2 { height: 200px; }
-.grid-item img {width: 100%;}
+.grid-item img {width: 100%; display: block;}
 
 @media (max-width:1400px) {
   .grid-item,
