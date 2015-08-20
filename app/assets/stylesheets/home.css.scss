@@ -19,7 +19,7 @@ body {
 /* ---- grid ---- */
 
 .grid {
-  background: #DDD;
+  background: #000;
 }
 
 /* clear fix */
@@ -34,28 +34,38 @@ body {
 /* 5 columns, percentage width */
 .grid-item,
 .grid-sizer {
-  width: 12.5%;
+  width: 10%;
 }
 
 .grid-item {
   float: left;
-  height: 100px;
-  background: #0D8;
+  // height: 100px;
+  // height: 40%;
+  background: #000;
   // border: 2px solid #333;
   // border-color: hsla(0, 0%, 0%, 0.7);
 }
 
-.grid-item--width2 { width: 25%; }
-.grid-item--height2 { height: 200px; }
+.grid-item--width2 { width: 20%; }
+// .grid-item--height2 { height: 200px; }
 .grid-item img {width: 100%;}
+
+@media (max-width:1400px) {
+  .grid-item,
+  .grid-sizer {
+  width: 12.5%;
+  }
+  .grid-item--width2 { width: 25%; }
+
+}
 
 @media (max-width:900px) {
   .grid-item, /* 3 columns */
   .grid-sizer {
-    width: 33%;
+    width: 25%;
   }
   
-  .grid-item--width2 { width: 66%; }
+  .grid-item--width2 { width: 50%; }
 }
 
 .isotope .isotope-item {
@@ -67,7 +77,13 @@ body {
   transition-property: transform, opacity;
 }
 
-
+@media (max-width: 768px) {
+    .grid-item, /* 3 columns */
+  .grid-sizer {
+    width: 33%;
+  }
+  .grid-item--width2 { width: 66%; }
+}
 
 @media handheld, screen and (max-width: 500px) {
 }
