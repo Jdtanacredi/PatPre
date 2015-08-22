@@ -37,7 +37,7 @@ body {
   width: 10%;
   margin-bottom: 0;
 }
-
+.random-bar {position:fixed;}
 .grid-item {
   float: left;
   // height: 100px;
@@ -48,6 +48,7 @@ body {
 }
 
 .grid-item--width2 { width: 20%; }
+.grid-item--width3 { width:40%; }
 // .grid-item--height2 { height: 200px; }
 .grid-item img {width: 100%; display: block;}
 

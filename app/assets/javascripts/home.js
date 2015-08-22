@@ -15,6 +15,30 @@ $(window).load(function() {
 	});
 });
 
+$(document).ready(function(){
+  $('.apple').waypoint(function(direction) {
+    // alert('apple');
+  });
+
+
+  $(window).scroll(function(){
+    var distanceFromTop = $("body").scrollTop();
+    // console.log(distanceFromTop);
+  if(distanceFromTop > 100 && distanceFromTop < 500){
+  //   $(window).off("scroll");
+    console.log('500!!!');
+    // Do some stuff here ..
+  }
+  if(distanceFromTop > 300 && distanceFromTop < 750){
+  //   $(window).off("scroll");
+    console.log('750!!!');
+    // Do some stuff here ..
+  }
+
+  });
+});
+
+
 // $(document).ready(function() {
 // 	// Display book reader
 // 	var $container = $('.isotope');
@@ -29,52 +53,61 @@ $(window).load(function() {
 // 		});
 // 	});
 // });
-
-
-
-
-// $(window).load(function() {
-// (function ($) {
-// 	var $container = $('.image-grid'),
-// 		colWidth = function () {
-// 			var w = $container.width(), 
-// 				columnNum = 1,
-// 				columnWidth = 0;
-// 			if (w > 1200) {
-// 				columnNum  = 5;
-// 			} else if (w > 900) {
-// 				columnNum  = 4;
-// 			} else if (w > 600) {
-// 				columnNum  = 3;
-// 			} else if (w > 300) {
-// 				columnNum  = 2;
-// 			}
-// 			columnWidth = Math.floor(w/columnNum);
-// 			$container.find('.item').each(function() {
-// 				var $item = $(this),
-// 					multiplier_w = $item.attr('class').match(/item-w(\d)/),
-// 					multiplier_h = $item.attr('class').match(/item-h(\d)/),
-// 					width = multiplier_w ? columnWidth*multiplier_w[1] : columnWidth,
-// 					height = multiplier_h ? columnWidth*multiplier_h[1]*0.5 : columnWidth*0.5;
-
-// 				$item.css({
-// 					width: width,
-// 					height: height
-// 				});
-// 			});
-// 			return columnWidth;
-// 		},
-// 		isotope = function () {
-// 			$container.isotope({
-// 				resizable: false,
-// 				itemSelector: '.item',
-// 				masonry: {
-// 					columnWidth: colWidth(),
-// 					gutterWidth: 0
-// 				}
-// 			});
-// 		};
-// 	isotope();
-// 	$(window).smartresize(isotope);
-// }(jQuery));
-// });
+var $window = $('.grid');
+$(window).scroll(function(){
+    hidden = true;
+    var titles = $('#album_logo, .title, .pack-title'),
+        titles = $('.pack-title');
+    if (hidden === true) {
+      for (var i = 0; i < Math.random() * 20; i++) {
+        var div = $('<div class="random-bar"/>');
+        div.width();
+        var color = 'rgba(205,205,205, 1)';
+        if (Math.random() > 0.5) {
+          color = 'rgba(184, 176, 0, 1)';
+        }
+        if (Math.random() > 0.6666) {
+          color = 'rgba(92, 54, 17, 1)';
+        }
+        div.css({
+          width: Math.random() * 100 + '%',
+          left: Math.random() * 95 + '%',
+          height: Math.random() * 5 + 20,
+          top: Math.random() * 95 + '%',
+          background:color
+        });
+        $('body').append(div);
+        hidden = false;
+      }
+    }
+    // titles.css({opacity: 0});
+    // setTimeout(function() {
+    //   titles.css({opacity: 1});
+    // }, 50);
+    // setTimeout(function() {
+    //   titles.css({opacity: 0});
+    // }, 80);
+    // setTimeout(function() {
+    //   titles.css({opacity: 1});
+    // }, 120);
+    // setTimeout(function() {
+    //   titles.css({opacity: 0});
+    // }, 160);
+    // setTimeout(function() {
+    //   titles.css({opacity: 1});
+    // }, 200);
+    scrollTimeout = setTimeout(function() {
+      $('.random-bar').remove();
+      clearTimeout(scrollTimeout);
+      hidden = true;
+    }, 200);
+    // parallax.each(function() {
+    //   $(this).css('margin-top', $window.scrollTop() * - 1 * $(this).data('speed'));
+    // });
+    // for (var i in offsets) {
+    //   if (offsets[i] > $window.scrollTop()) {
+    //     setActive(i);
+    //     break;
+    //   }
+    // }
+  });
