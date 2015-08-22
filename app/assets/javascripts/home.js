@@ -15,8 +15,18 @@ $(window).load(function() {
 	});
 });
 
+function hideFuzz() {
+  $('.fuzz').css('display','none');
+}
+
+
 $(document).ready(function(){
   $('.apple').waypoint(function(direction) {
+    if (direction === 'down') {
+      console.log('fuzzzz')
+      $('.fuzz').css('display','block');
+      var timeoutID = window.setTimeout(hideFuzz, 500);
+    };
     // alert('apple');
   });
 
