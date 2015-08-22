@@ -1,6 +1,31 @@
+var timeoutID;
+
+
+function randomizeFuzz() {
+
+}
+
+function hideFuzz() {
+  randomizeFuzz();
+  $('.fuzz').css('display','none');
+}
+
+function changeTrack(sourceUrl) {
+    var audio = $(".player");      
+    $(".mp3-source").attr("src", sourceUrl);
+    /****************/
+    audio[0].pause();
+    audio[0].load();//suspends and restores all audio element
+    audio[0].play();
+    timeoutID = window.setTimeout(function() {
+    audio[0].pause();
+    }, 4000);
+    /****************/
+}
+
 $(window).load(function() {
 	$('.fuzz').fadeOut(6000, function() {
-		$(this).css('display','none');
+		hideFuzz();
 	});
 	var $container = $('.grid');
 	$container.imagesLoaded( function() {
@@ -15,17 +40,12 @@ $(window).load(function() {
 	});
 });
 
-function hideFuzz() {
-  $('.fuzz').css('display','none');
-}
-
-
 $(document).ready(function(){
   $('.apple').waypoint(function(direction) {
     if (direction === 'down') {
       console.log('fuzzzz')
       $('.fuzz').css('display','block');
-      var timeoutID = window.setTimeout(hideFuzz, 500);
+      timeoutID = window.setTimeout(hideFuzz, 500);
     };
     // alert('apple');
   });
@@ -34,8 +54,10 @@ $(document).ready(function(){
   $(window).scroll(function(){
     var distanceFromTop = $("body").scrollTop();
     // console.log(distanceFromTop);
+
   if(distanceFromTop > 100 && distanceFromTop < 500){
   //   $(window).off("scroll");
+    changeTrack('assets/Skepta-cut.mp3');
     console.log('500!!!');
     // Do some stuff here ..
   }
@@ -46,6 +68,23 @@ $(document).ready(function(){
   }
 
   });
+
+var iFrequency = 5000; // expressed in miliseconds
+var myInterval = 0;
+
+// STARTS and Resets the loop if any
+function startLoop() {
+    if(myInterval > 0) clearInterval(myInterval);  // stop
+    myInterval = setInterval( "doSomething()", iFrequency );  // run
+}
+
+function doSomething()
+{
+    // (do something here)
+}
+
+
+
 });
 
 
