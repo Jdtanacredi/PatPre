@@ -1,5 +1,5 @@
 var timeoutID;
-
+var gridImages;
 
 function randomizeFuzz() {
 
@@ -69,20 +69,48 @@ $(document).ready(function(){
 
   });
 
-var iFrequency = 5000; // expressed in miliseconds
-var myInterval = 0;
+// var iFrequency = 5000; // expressed in miliseconds
+// var myInterval = 0;
 
-// STARTS and Resets the loop if any
-function startLoop() {
-    if(myInterval > 0) clearInterval(myInterval);  // stop
-    myInterval = setInterval( "doSomething()", iFrequency );  // run
+// // STARTS and Resets the loop if any
+// function startLoop() {
+//     if(myInterval > 0) clearInterval(myInterval);  // stop
+//     myInterval = setInterval( "doSomething()", iFrequency );  // run
+// }
+
+// function doSomething()
+// {
+//     // (do something here)
+// }
+
+
+function randomImageSelect() {
+  gridImages = $('.grid-item');
+  return gridImages.get().sort(function(){ 
+    return Math.round(Math.random())-0.5
+  }).slice(0,5);
 }
 
-function doSomething()
-{
-    // (do something here)
+function flickerImage(randomImages) {
+  
+  jQuery.each(randomImages,function(index){
+    $(this).addClass('flicker');  
+  });
+
+  setTimeout(function() {
+    $('.grid-item').removeClass('flicker');
+  }, 2000);
 }
 
+
+function randomEffects() {
+  var randomImages = randomImageSelect();
+  
+  flickerImage(randomImages);
+  // i++;
+  setTimeout(randomEffects, 5000);
+}
+randomEffects();
 
 
 });
