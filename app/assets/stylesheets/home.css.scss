@@ -36,15 +36,12 @@ body {
 .grid-sizer {
   width: 10%;
   margin-bottom: 0;
+  opacity: 0;
 }
 .random-bar {position:fixed;}
 .grid-item {
   float: left;
-  // height: 100px;
-  // height: 40%;
   background: #000;
-  // border: 2px solid #333;
-  // border-color: hsla(0, 0%, 0%, 0.7);
 }
 
 .grid-item--width2 { width: 20%; }
@@ -60,17 +57,20 @@ body {
   @keyframes flicker-effect {
     0% {opacity: 0;}
 
-    10% {opacity: 1}
+    10% {opacity: 1;}
 
-    30% {opacity: 0}
+    30% {opacity: 0;}
+    32% {opacity: 1;}
+    34% {opacity: 0;}
+    36% {opacity: 1;}
+    38% {opacity: 0;}
+    40% {opacity: 1;}
 
-    40% {opacity: 1}
+    50% {opacity: 0;}
 
-    50% {opacity: 0}
+    60% {opacity: 1;}
 
-    60% {opacity: 1}
-
-    90% { opacity: 0;}
+    90% {opacity: 0;}
 
     100% {opacity: 1;}
   }
@@ -85,6 +85,7 @@ body {
   width: 12.5%;
   }
   .grid-item--width2 { width: 25%; }
+  .grid-item--width3 { width: 50%; }
 
 }
 
@@ -140,6 +141,8 @@ body {
 }
 @media handheld, screen and (min-width: 1400px) { 
 }
+
+.stripeTests {display: none;}
 
 .fuzz {
   margin: 0;
