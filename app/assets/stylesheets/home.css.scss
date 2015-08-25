@@ -38,6 +38,10 @@ body {
   margin-bottom: 0;
   opacity: 0;
 }
+.grid-item:hover {
+  transition: opacity 1s ease;
+  opacity: 1;
+}
 .random-bar {position:fixed;}
 .grid-item {
   float: left;
