@@ -8,12 +8,12 @@ CaudalieBeautygrows::Application.routes.draw do
     put 'approve', :approve, on: :collection
   end
 
-  root :to => "home#index"
+  # root :to => "home#index"
   get 'charges/create'
   resources :charges, only: [:create]
+  get "home/index"
 
-
-  # root :to => 'mcsubscribe#index'
+  root :to => 'mcsubscribe#index'
   post 'mcsubscribe/subscribe', to: 'mcsubscribe#subscribe'
 
   # The priority is based upon order of creation:
