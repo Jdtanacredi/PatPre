@@ -151,11 +151,15 @@
 </div>
 </div>
 
-<div class="footer">
-  <div class="footer-image-container smear-gold"><img src="" alt="footer-image"></div>
-  <div class="footer-image-container fuckoff"><img src="" alt="footer-image"></div>
-  <div class="footer-image-container smear-gold"><img src="" alt="footer-image"></div>
-  <div class="footer-image-container fuckoff"><img src="" alt="footer-image"></div>
+<div class="footer clearfix">
+<div class="copyright"><p>&copy;patmcgrathlabs</p></div>
+  <div class="footer-image-container insta-container">
+    <a href=""><%= image_tag "social/insta.png" %></a>
+    <a href=""><%= image_tag "social/fb.png" %></a>
+    <a href=""><%= image_tag "social/twitter.png" %></a>
+    <div class="sign-up"><p> | </p></div>
+    <div class="sign-up"><p><%= link_to "Sign Up", root_url %></p></div> 
+  </div>
 </div>
 
 

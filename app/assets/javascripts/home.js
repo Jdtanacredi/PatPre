@@ -7,7 +7,9 @@ function randomizeFuzz() {
 
 function hideFuzz() {
   randomizeFuzz();
-  $('.fuzz').css('display','none');
+  timeoutID = window.setTimeout(function() {
+    $('.fuzz').css('display','none');
+  }, 1000);
 }
 
 function changeTrack(sourceUrl) {

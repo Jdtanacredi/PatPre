@@ -9,24 +9,44 @@
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
+
+@font-face {
+  font-family: 'typewriter';
+  src: asset-url('american-typewriter.ttf', font);
+}
+
+
+
 body {
   background-color: #000;
   color: #cdcdcd;
   margin: 0;
+  font-family: 'typewriter';
   // font-size: 13px;
   // line-height: 18px;
 }
 
 .footer {
-  // position: fixed;
+  position: relative;
   // bottom: 0;
   // width: 100%;
 }
 
-.footer-image-container {
-  width: 25%;
-  float: left;
+.sign-up {display: inline-block;}
+.footer-image-container {float: right;}
+.footer-image-container img {width: 50px;}
+.copyright {float: left; text-transform: uppercase;}
+.copyright p,
+.sign-up p {
+  display: table-cell;
+  vertical-align: middle;
   text-align: center;
+  height: 50px;
+}
+.sign-up a {
+  text-decoration: none;
+  color: #cdcdcd;
+  padding: 0 8px;
 }
 // p, ol, ul, td {
 //   font-size: 13px;
