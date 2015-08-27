@@ -34,7 +34,7 @@ body {
 /* 5 columns, percentage width */
 .grid-item,
 .grid-sizer {
-  width: 10%;
+  width: 12.5%;
   margin-bottom: 0;
   opacity: 0;
 }
@@ -48,8 +48,8 @@ body {
   background: #000;
 }
 
-.grid-item--width2 { width: 20%; }
-.grid-item--width3 { width:40%; }
+.grid-item--width2 { width: 25%; }
+.grid-item--width3 { width:50%; }
 // .grid-item--height2 { height: 200px; }
 .grid-item img {width: 100%; display: block;}
 
