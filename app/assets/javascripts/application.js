@@ -13,8 +13,12 @@
 
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui.min.js
 //= require jquery.fancybox.pack
 //= require jquery.fancybox-buttons
 //= require jquery.waypoints.min
 //= require jquery.slimscroll
+//= require imagesLoaded.js
+//= require video.js
+//= require bigVideo.js
 //= require_tree .
