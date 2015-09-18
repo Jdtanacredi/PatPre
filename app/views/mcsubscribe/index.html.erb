@@ -5,3 +5,13 @@
    <%= submit_tag("Subscribe") %>
 <% end %>
 <div id="response">Response Will be displayed here</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	$(function() {
+    var BV = new $.BigVideo();
+    BV.init();
+    BV.show("<%= asset_path('Edit-3.mp4') %>");
+});
+});
+</script>
