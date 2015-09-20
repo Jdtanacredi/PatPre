@@ -8,14 +8,22 @@ body{
 	color: #000;
 	font-size: 33px;
 }
-#cmd {position: relative;}
+#cmd {
+	position: relative; 
+	border-bottom: 2px solid #000;
+	float: left;
+  padding-right: 20px;
+  margin-left: 10px;
+  width: 208px;
+  text-align: center;
+}
 #cmd span{
-	font-size: 65px;
+	font-size: 42px;
 	position: absolute;
-	top:-25px;
+	top:-20px;
 
   -webkit-animation-direction: normal;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 1.2s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-name: blink;
   -webkit-animation-timing-function: ease;   
@@ -27,4 +35,25 @@ body{
     50% { opacity: 1 }
     75% { opacity: 1 }
     100% { opacity: 0 }
+}
+
+.rx-only {
+	font-size: .5em;
+	width:	390px;
+	float: right;
+	.rx-tag {
+		font-size: 1.2em;
+		float: left;
+		margin: 0;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+}
+
+.patLabel {
+	text-align: center;
+	height: 80vh;
+	img {
+		padding-top: 30vh;
+	}
 }
