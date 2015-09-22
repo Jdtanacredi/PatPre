@@ -1,0 +1,40 @@
+// Place all the styles related to the Onetests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.top-bar,
+.bottom-bar {
+	position: fixed;
+  background-color: #000;
+  width: 100%;
+  color: #fff;
+}
+.top-bar {
+	top: 0;
+}
+.bottom-bar {
+	bottom: 0;
+	padding: 30px 0;
+}
+
+.email-field {position: relative;}
+// Terminal Indicator Start
+
+.email-field span{
+	font-size: 42px;
+	position: absolute;
+	top:-20px;
+
+  -webkit-animation-direction: normal;
+  -webkit-animation-duration: 1.2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: blink;
+  -webkit-animation-timing-function: ease;   
+}
+
+@-webkit-keyframes 'blink' {
+    0% { opacity:0 }
+    25% { opacity:1 }
+    50% { opacity: 1 }
+    75% { opacity: 1 }
+    100% { opacity: 0 }
+}

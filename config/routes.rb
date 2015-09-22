@@ -1,5 +1,7 @@
 CaudalieBeautygrows::Application.routes.draw do
 
+  get "onetests/index"
+
   get "products/index"
 
   devise_for :users
