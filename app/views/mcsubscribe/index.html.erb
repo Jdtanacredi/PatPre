@@ -1,41 +1,65 @@
-<!-- <h3>Add a New Member</h3> -->
-<!-- <p>Please enter your email address to subscribe to our newsletter.</p> -->
-<%#= form_tag('/mcsubscribe/subscribe', method: "post", id: "mcsubscribe", remote: "true") do -%>
-   <%#= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
-   <%#= submit_tag("Subscribe") %>
-<%# end %>
-<!-- <div id="response">Response Will be displayed here</div> -->
+
 <div class="clearfix patLabel">
-	<%= image_tag('signup/Patmcgrath.png') %>
+<h3>Add a New Member</h3>
+<p>Please enter your email address to subscribe to our newsletter.</p>
+<%= form_tag('/mcsubscribe/subscribe', method: "post", id: "mcsubscribe", remote: "true") do -%>
+   <%= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
+   <%= submit_tag("Subscribe") %>
+<% end %>
+<div id="response">Response Will be displayed here</div>
+	<%#= image_tag('signup/Patmcgrath.png') %>
 </div>
 
+<div class="clickMe">test functionality</div>
 
-<div class="rx-only">
+<!-- <div class="rx-only">
 <p class="rx-tag">rx Only</p>
 	<div class="" id="cmd">
 	</div>
 </div>
-
+ -->
 <script type="text/javascript">
+    
+// var greeting = "ENTER YOUR EMAIL", 
+//     cursor = "<span>&#9646;</span>",
+//     cmd = $('#cmd');
 
-
-var greeting = "ENTER YOUR EMAIL", 
-    cursor = "<span>&#9646;</span>",
-    cmd = $('#cmd');
-
-function type(el,text,pos,no){
-    ctext = text.substring(0,pos)+(pos%2?cursor:cursor);
-    $(el).html(ctext);
-    if(pos==text.length){
-        $(el).html(text+cursor);
-    }else{
-        window.setTimeout('type("'+el+'","'+text+'",'+(pos+1)+','+1+');',70);
-    }
-}
+// function type(el,text,pos,no){
+//     ctext = text.substring(0,pos)+(pos%2?cursor:cursor);
+//     $(el).html(ctext);
+//     if(pos==text.length){
+//         $(el).html(text+cursor);
+//     }else{
+//         window.setTimeout('type("'+el+'","'+text+'",'+(pos+1)+','+1+');',70);
+//     }
+// }
 
 $(document).ready(function(){
-    cmd.append(cursor);
-    type('#cmd',greeting,0);
+
+$(function(){
+  var nav = $('.patLabel'),
+      animateTime = 500,
+      navLink = $('.clickMe');
+  navLink.click(function(){
+    if(nav.height() === 0){
+      autoHeightAnimate(nav, animateTime);
+    } else {
+      nav.stop().animate({ height: '0' }, animateTime);
+    }
+  });
+})
+
+
+
+function autoHeightAnimate(element, time){
+    var curHeight = element.height(), // Get Default Height
+        autoHeight = element.css('height', 'auto').height(); // Get Auto Height
+          element.height(curHeight); // Reset to Default Height
+          element.stop().animate({ height: autoHeight }, parseInt(time)); // Animate to Auto Height
+}
+
+
+
 })
 
 

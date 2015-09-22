@@ -1,12 +1,15 @@
 // Place all the styles related to the mcsubscribe controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {background:#fff;}
+body {
+	background: image-url("signup/Approved-Gold_Resized_All19.gif");
+	background-size: cover;
+}
 
 body{
-	background:#FFF;
+	// background:#FFF;
 	color: #000;
-	font-size: 33px;
+	// font-size: 33px;
 }
 #cmd {
 	position: relative; 
@@ -50,10 +53,30 @@ body{
 	}
 }
 
-.patLabel {
-	text-align: center;
-	height: 80vh;
-	img {
-		padding-top: 30vh;
+// .patLabel {
+// 	text-align: center;
+// 	height: 80vh;
+// 	img {
+// 		padding-top: 30vh;
+// 	}
+	.patLabel {
+	  text-align: center;
+    // position: relative;
+    margin: 25vh 0;
+    background-color: #000;
+    color: white;
+    // visibility: none;
+    // animation-name: expand;
+ 		// animation-duration: 2s;
+ 		// transition: max-height 3s;
+ 		left: calc(-50vw + 50%);
+ 		width: 100vw;
+ 		height: 0;
+ 		overflow: hidden;
 	}
-}
+
+	.patLabel.open {
+		// max-height: 30vh;
+	}
+
+
