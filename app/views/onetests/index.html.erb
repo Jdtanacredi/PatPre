@@ -6,7 +6,7 @@
 			<%= form_tag('/mcsubscribe/subscribe', method: "post", id: "mcsubscribe", remote: "true") do -%>
 			<p>Enter Your Email <span>&#9646;</span></p>
 			<%= email_field(:email, :address, {id: "email", placeholder: ""}) %>
-			<%= submit_tag("Subscribe") %>
+			<%= submit_tag("Subscribe", {id: "subscribe"}) %>
 			<% end %>
 		</div>
 	</div>
@@ -122,6 +122,28 @@ function StartCountDown(myDiv,myTargetDate)
   }
 	StartCountDown("countdown","10/27/2015 12:33 PM -0500")
 // COUNTDOWN END
+
+// SLIDE TOP/BOTTOM PANELS START //////////////
+
+var myListener = function () {
+    document.removeEventListener('mousemove', myListener, false);
+		$('.top-bar').animate({"top":"0px"}, "slow").addClass('visible');
+		$('.bottom-bar').animate({"bottom":"0px"}, "slow").addClass('visible');
+    // do stuff
+};
+
+document.addEventListener('mousemove', myListener, false);
+
+
+  $('.top-bar').click(function(){
+  var hidden = $('.top-bar');
+  if (hidden.hasClass('visible')){
+      hidden.animate({"top":"-100px"}, "slow").removeClass('visible');
+  } else {
+
+  }
+  });
+
 
 
 

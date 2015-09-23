@@ -14,11 +14,11 @@ body {
   color: #fff;
 }
 .top-bar {
-	top: 0;
+	top: -100px;
 	height: 100px
 }
 .bottom-bar {
-	bottom: 0;
+	bottom: -160px;
 	padding: 30px 0;
 	height: 160px;
 }
@@ -33,6 +33,12 @@ body {
 		color: #fff;
     border: none;
     border-bottom: 1px solid white;
+	}
+	#subscribe {
+    border: 2px solid white;
+    background-color: #000;
+    color: #fff;
+    padding: 7px;
 	}
 	p {display: inline-block;}
 	input {display: inline-block;}
