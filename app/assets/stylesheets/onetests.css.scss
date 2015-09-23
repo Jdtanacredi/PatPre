@@ -22,15 +22,22 @@ body {
 	padding: 30px 0;
 	height: 160px;
 }
-.pat-logo {float: left; width: 40%;}
+.pat-logo {float: left; width: 40%; padding-top: 20px;}
 
 .email-container {
 	float: right;
 	margin-right: 20px;
 	.email-field { position: relative;}
+	#email {
+		background-color: #000;
+		color: #fff;
+    border: none;
+    border-bottom: 1px solid white;
+	}
 	p {display: inline-block;}
 	input {display: inline-block;}
 }
+
 // Terminal Indicator Start
 
 .email-field span{
@@ -51,4 +58,11 @@ body {
     50% { opacity: 1 }
     75% { opacity: 1 }
     100% { opacity: 0 }
+}
+//  Terminal Indicator end
+
+.countdown {
+	text-align: center;
+	font-size: 3em;
+	letter-spacing: 6px;
 }
