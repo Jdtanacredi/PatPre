@@ -1,5 +1,7 @@
 CaudalieBeautygrows::Application.routes.draw do
 
+  get "threetests/index"
+
   get "twotests/index"
 
   get "onetests/index"

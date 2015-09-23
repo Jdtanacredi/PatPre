@@ -1,0 +1,33 @@
+// Place all the styles related to the threetests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.subscribe-modal {
+  &:before{
+    content: "";
+    // display: none;
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 10;
+  }
+}
+
+.top-bar-modal {
+	position: fixed;
+	// background-color: #000;
+	width: 100%;
+	color: #fff;
+	z-index: 15;
+	height: 100px;
+}
+
+.bottom-bar-modal {
+	background-color: transparent;
+	z-index: 15;
+	position: fixed;
+  width: 100%;
+  color: #fff;
+	bottom: 0;
+  margin: 20px;
+}
