@@ -47,7 +47,7 @@
 	$(document).ready(function() {
 		try {
 			$('body').ripples({
-				resolution: 512,
+				resolution: 912,
 				dropRadius: 20, //px
 				perturbance: 0.04,
 			});
@@ -133,18 +133,6 @@ var myListener = function () {
 };
 
 document.addEventListener('mousemove', myListener, false);
-
-
-  $('.top-bar').click(function(){
-  var hidden = $('.top-bar');
-  if (hidden.hasClass('visible')){
-      hidden.animate({"top":"-100px"}, "slow").removeClass('visible');
-  } else {
-
-  }
-  });
-
-
 
 
 </script>
