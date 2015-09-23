@@ -1,6 +1,9 @@
 <div class="top-bar">
 	<div class="pat-logo">PAT MCGRATH LABS</div>
-	<div class="countdown-container">countdown clock</div>
+	<div class="email-container">
+		<div class="email-field">
+			<p>Enter Your Email <span>&#9646;</span></p><input type="email" name="name" value=""></div>
+	</div>
 </div>
 
 <div class="bottom-bar">
@@ -11,8 +14,7 @@
 	</div>
 </div>
  -->
-
-	<div class="email-field">Enter Your Email <span>&#9646;</span></div>
+ <div class="countdown">10 : 10 : 10 : 10</div>
 </div>
 
 <script type="text/javascript">
@@ -72,8 +74,8 @@
 			var $el = $('body');
 			var x = Math.random() * $el.outerWidth();
 			var y = Math.random() * $el.outerHeight();
-			var dropRadius = 20;
-			var strength = 0.04 + Math.random() * 0.04;
+			var dropRadius = 60;
+			var strength = 0.14 + Math.random() * 0.14;
 
 			$el.ripples('drop', x, y, dropRadius, strength);
 		}, 400);
